@@ -1,14 +1,15 @@
+/* App.css */
+
 body {
-  font-family: Arial, sans-serif;
-  background-color: #282c34;
-  color: white;
-  text-align: center;
   margin: 0;
-  padding: 0;
+  font-family: 'Roboto', sans-serif;
+  background: linear-gradient(to bottom right, #ff7e5f, #feb47b);
+  color: #333;
   display: flex;
   justify-content: center;
   align-items: center;
   height: 100vh;
+  background-attachment: fixed;
 }
 
 .App {
@@ -16,23 +17,86 @@ body {
 }
 
 .App-header {
-  background-color: #61dafb;
-  padding: 20px;
-  border-radius: 10px;
+  background: rgba(255, 255, 255, 0.85);
+  border-radius: 15px;
+  padding: 50px;
+  width: 90%;
+  max-width: 600px;
+  margin: auto;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(10px);
+}
+
+h1 {
+  font-size: 3em;
+  margin-bottom: 20px;
+  color: #ff7e5f;
+  text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1);
 }
 
 button {
-  background-color: #282c34;
-  color: white;
+  background: #ff7e5f;
+  color: #fff;
   border: none;
-  padding: 10px 20px;
-  margin: 10px;
+  padding: 15px 35px;
+  font-size: 1.2em;
+  border-radius: 50px;
   cursor: pointer;
+  transition: background 0.3s, transform 0.2s;
 }
 
-input {
-  padding: 10px;
-  margin: 10px;
-  border: 1px solid #ccc;
-  border-radius: 5px;
+button:hover {
+  background: #ff6f61;
+  transform: translateY(-3px);
+}
+
+button:active {
+  background: #ff6347;
+}
+
+input.text-input {
+  width: calc(100% - 20px);
+  padding: 12px;
+  margin: 15px 0;
+  border-radius: 50px;
+  border: 2px solid #ff7e5f;
+  font-size: 1.1em;
+  color: #333;
+  outline: none;
+  transition: border-color 0.3s, box-shadow 0.3s;
+}
+
+input.text-input:focus {
+  border-color: #feb47b;
+  box-shadow: 0 0 10px rgba(255, 126, 95, 0.5);
+}
+
+.error {
+  color: #e74c3c;
+  font-weight: bold;
+}
+
+p {
+  margin: 10px 0;
+  font-size: 1.2em;
+}
+
+@media (max-width: 600px) {
+  .App-header {
+    width: 95%;
+    padding: 30px;
+  }
+
+  h1 {
+    font-size: 2.2em;
+  }
+
+  button {
+    padding: 12px 25px;
+    font-size: 1em;
+  }
+
+  input.text-input {
+    font-size: 1em;
+  }
 }

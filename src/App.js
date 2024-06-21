@@ -3,6 +3,8 @@ import { ethers } from 'ethers';
 import detectEthereumProvider from '@metamask/detect-provider';
 import './App.css';
 
+
+
 function App() {
   const [account, setAccount] = useState(null);
   const [provider, setProvider] = useState(null);
